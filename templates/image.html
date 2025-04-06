@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Image Detection</h1>
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+  </nav>
+  <form action="{{ url_for('upload_image') }}" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Upload &amp; Detect</button>
+  </form>
+  {% if original_image %}
+    <h3>Original Image:</h3>
+    <img src="{{ url_for('static', filename=original_image.split('static/')[-1]) }}" alt="Original Image">
+  {% endif %}
+  {% if detected_image %}
+    <h3>Detected Image:</h3>
+    <img src="{{ url_for('static', filename=detected_image.split('static/')[-1]) }}" alt="Detected Image">
+  {% endif %}
+</body>
+</html>

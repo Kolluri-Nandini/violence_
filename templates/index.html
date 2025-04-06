@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detection App Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Detection App</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('image_page') }}">Image Detection</a></li>
+          <li><a href="{{ url_for('video_page') }}">Video Detection</a></li>
+          <li><a href="{{ url_for('camera_page') }}">Camera Detection</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-image">
+      <img src="{{ url_for('static', filename='bg.jpeg') }}" alt="Header Image">
+    </div>
+  </header>
+
+  <main>
+    <!-- Additional page content can go here -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>

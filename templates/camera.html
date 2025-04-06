@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Camera Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Camera Detection</h1>
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+  </nav>
+  <h3>Live Camera Stream:</h3>
+  <img src="{{ url_for('real_time_feed') }}" alt="Real-Time Camera Stream" width="640">
+</body>
+</html>

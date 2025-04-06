@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Video Detection</h1>
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+  </nav>
+  <form action="{{ url_for('upload_video') }}" method="post" enctype="multipart/form-data">
+    <input type="file" name="video" required>
+    <button type="submit">Upload &amp; Stream</button>
+  </form>
+  {% if video_feed %}
+    <h3>Processed Video Stream:</h3>
+    <img src="{{ url_for('video_feed', video_path=video_feed) }}" alt="Video Stream" width="640">
+  {% endif %}
+</body>
+</html>

@@ -1,0 +1,7 @@
+train: C:\Users\HI\PycharmProjects\violence_\train\images
+val: C:\Users\HI\PycharmProjects\violence_\valid\images
+test: C:\Users\HI\PycharmProjects\violence_\test\images
+
+nc: 2
+names: ['NonViolence', 'Violence']
+
